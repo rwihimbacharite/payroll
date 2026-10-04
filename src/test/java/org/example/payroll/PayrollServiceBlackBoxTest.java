@@ -5,14 +5,14 @@ import java.util.concurrent.Callable;
 import org.example.payroll.TestSupport.Ctx;
 import static org.example.payroll.TestSupport.*;
 
-/** Black-box functional tests (specification based) */
+
 public class PayrollServiceBlackBoxTest {
     static final List<Case> cases = new ArrayList<>();
     static void add(String id, String tech, String req, String feat, String in, String exp, Callable<Object> a) {
         cases.add(new Case(id, tech, req, feat, in, exp, a)); }
 
     public static void main(String[] args) throws Exception {
-// ---------------- BLACK-BOX (specification based) ----------------
+
         add("BB-01","Equivalence partition (valid)","FR1","EmployeeManager.add","add(E010,Dave,IT,50000,5000)","count=4",
            () -> { Ctx c = new Ctx(); c.em.add(emp("E010","Dave","IT",50000,5000)); return "count=" + c.em.count(); });
         add("BB-02","Equivalence partition (existing id)","FR2","EmployeeManager.update","update(E001,Alice,IT,55000,10000)","basic=55000.00",
