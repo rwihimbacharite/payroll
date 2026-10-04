@@ -4,9 +4,9 @@ import java.io.PrintWriter;
 import java.util.*;
 import java.util.concurrent.Callable;
 
-/** Shared helpers for the plain-Java test programs (no test framework used). */
+
 public class TestSupport {
-    /** Fresh system with three sample employees; created for every test case. */
+    
     public static class Ctx {
         public EmployeeManager em = new EmployeeManager();
         public PayrollService ps = new PayrollService(em);
@@ -25,7 +25,7 @@ public class TestSupport {
     public static String f(double d) { return String.format("%.2f", d); }
     public static Employee emp(String id, String n, String d, double b, double a) { return new Employee(id, n, d, b, a); }
 
-    /** Runs all cases, prints PASS/FAIL, writes a TSV file, exits with 1 if any case failed. */
+    
     public static void runAll(String title, List<Case> cases, String outFile, String kind) throws Exception {
         int pass = 0, fail = 0;
         System.out.println("=== " + title + " ===");
