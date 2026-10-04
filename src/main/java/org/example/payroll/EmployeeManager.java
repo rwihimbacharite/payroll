@@ -2,11 +2,11 @@ package org.example.payroll;
 
 import java.util.*;
 
-/** FR1-FR4: add, update, delete, search employees. */
+
 public class EmployeeManager {
     private final Map<String, Employee> store = new LinkedHashMap<>();
 
-    /** Validation rules for an employee (used by add and update). */
+   
     public static void validate(Employee e) {
         if (e.id() == null || e.id().isBlank())     throw new IllegalArgumentException("Id required");
         if (e.name() == null || e.name().isBlank()) throw new IllegalArgumentException("Name required");
