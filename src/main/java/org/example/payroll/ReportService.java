@@ -2,7 +2,7 @@ package org.example.payroll;
 
 import java.util.*;
 
-/** FR7: reporting. */
+
 public class ReportService {
     private final EmployeeManager em;
     private final PayrollService ps;
