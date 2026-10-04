@@ -1,0 +1,5 @@
+BB-01	Black-box	Equivalence partition (valid)	FR1	EmployeeManager.add	add(E010,Dave,IT,50000,5000)	count=4	count=4	Pass
+BB-02	Black-box	Equivalence partition (existing id)	FR2	EmployeeManager.update	update(E001,Alice,IT,55000,10000)	basic=55000.00	basic=55000.00	Pass
+BB-03	Black-box	Decision table (overtime, tax 20%)	FR6	PayrollService.processPayment	processPayment(E002, 2026-10, 10)	net=86000.00	net=86000.00	Pass
+BB-04	Black-box	Error guessing (double payment)	FR6	PayrollService.processPayment	processPayment(E001, 2026-10, 0) twice	IllegalStateException	IllegalStateException	Pass
+BB-05	Black-box	Equivalence partition (with data)	FR7	ReportService.payrollReport	pay E001 and E003 for 2026-10, then payrollReport(2026-10)	Total net: 157500.00	Total net: 157500.00	Pass
