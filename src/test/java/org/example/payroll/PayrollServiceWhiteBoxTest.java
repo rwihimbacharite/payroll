@@ -5,14 +5,14 @@ import java.util.concurrent.Callable;
 import org.example.payroll.TestSupport.Ctx;
 import static org.example.payroll.TestSupport.*;
 
-/** White-box structural tests (code based) */
+
 public class PayrollServiceWhiteBoxTest {
     static final List<Case> cases = new ArrayList<>();
     static void add(String id, String tech, String req, String feat, String in, String exp, Callable<Object> a) {
         cases.add(new Case(id, tech, req, feat, in, exp, a)); }
 
     public static void main(String[] args) throws Exception {
-// ---------------- WHITE-BOX (structure based) ----------------
+
         add("WB-01","Basis path 2: gross<=60000","FR5","PayrollService.calculateTax","calculateTax(30000)","0.00",
            () -> f(new Ctx().ps.calculateTax(30000)));
         add("WB-02","Basis path 3: gross<=100000","FR5","PayrollService.calculateTax","calculateTax(80000)","4000.00",
